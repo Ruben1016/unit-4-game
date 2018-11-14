@@ -3,18 +3,39 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Bros Collector</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+
+    <h1>Bros Collector!</h1>
 </head>
+
 <body>
 
-    <script>
+    <h2 id="instructions">
+        You will be given a random number at the start of the game. <br><br>
+        There are four bros below. By clicking on a bro you will add a specific amount of points to your total score. <br><br>
+        You win the game by matching your total score to the random number, you lose if your total score goes above the number. <br><br>
+        The value of each bro is hidden from you until you click on it. <br><br>
+        Each time when the game starts, the game will change the values of each bro.
+    </h2>
     
-    
-    
-    </script>
+    <div id="goal"></div>
+    <div id="winLoss">
+        <p>Wins: <span id="wins"></span></p>
+        <p>Losses: <span id="losses"></span></p>
+    </div>
+    <div id="bros">
+        <img src="assets/images/boo.jpeg" height="285" class="bros" id="boo" value=0>
+        <img src="assets/images/Browser.jpeg" height="285" class="bros" id="Browser" value=0>
+        <img src="assets/images/Mario.jpg" height= "285" width= "250" class="bros" id="Mario" value=0>
+        <img src="assets/images/Waluigi.jpg" heigh= "250" width= "250" class="bros" id="Waluigi" value=0>
+    </div>
+    <div id="score"></div>
+
     
 </body>
 </html>
