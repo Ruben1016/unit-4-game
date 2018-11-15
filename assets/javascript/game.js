@@ -6,8 +6,13 @@ $(document).ready(function(){
     resetGame();
     
     $('.bros').on("click", function(){
-        score += parseInt($(this).val());
+        score += Number($(this).val());
+
+        console.log("click");
+
+
         $("#score").html(score);
+
     
         if(score == goalNumber){
             alert("You Win!");
@@ -15,7 +20,7 @@ $(document).ready(function(){
             resetGame();
         }
         if(score > goalNumber){
-            alert("You Lose! Haha");
+            alert("You Lose! Boo");
             losses++;
             resetGame();
         }
@@ -27,7 +32,7 @@ $(document).ready(function(){
         resetGame();
     }
     if(score > goalNumber){
-        alert("You Lose! Haha");
+        alert("You Lose! Boo");
         losses++;
         resetGame();
     }
@@ -35,14 +40,17 @@ $(document).ready(function(){
     
     function resetGame(){
         score = 0;
-        goalNumber = Math.floor((Math.random() * 15) + 40);
-        $("#Mario").val(Math.floor((Math.random() * 7) + 3));
-        $("#Boo").val(Math.floor((Math.random() * 7) + 3));
-        $("#Browser").val(Math.floor((Math.random() * 7) + 3));
-        $("#Wauligi").val(Math.floor((Math.random() * 7) + 3));
+        goalNumber = Math.floor((Math.random() * 101) + 19);
+        $("#Mario").val(Math.floor((Math.random() * 11) + 1));
+        $("#boo").val(Math.floor((Math.random() * 11) + 1));
+        $("#Browser").val(Math.floor((Math.random() * 11) + 1));
+        $("#Waluigi").val(Math.floor((Math.random() * 11) + 1));
         $("#goal").html(goalNumber);
         $("#score").html(score);
         $("#wins").html(wins);
         $("#losses").html(losses);
+
+
     }
+    resetGame()
     });
